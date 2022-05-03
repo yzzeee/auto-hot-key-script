@@ -239,7 +239,13 @@ Return 결과
 }
 
 ; ----------------------------------------------------------- 단축키
-#N::run Notepad ; Win + N 키로 메모장 실행 
+#N::Run Notepad ; Win + N 키로 메모장 실행 
 return
-#C::run calc ; Win +  c키로 계산기 실행
+#C::Run calc ; Win +  c키로 계산기 실행
+return
+#z::Run *RunAs "C:\Windows\system32\rundll32.exe" sysdm.cpl`,EditEnvironmentVariables ; 환경변수 편집
+return
+#+z::Run shell:startup ; 시작 프로그램 폴더 열기
+return
+#H::Run *RunAs "C:\Program Files\Notepad2\Notepad2.exe" C`:`\Windows`\System32`\drivers`\etc`\hosts ; 호스트 파일 편집
 return
